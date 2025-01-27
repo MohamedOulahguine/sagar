@@ -30,11 +30,13 @@ getTheme.addEventListener("click", () => {
 });
 
 menuNavOpen.addEventListener("click", () => {
+  document.body.classList.add("no-scroll");
   conNav.style.display = "flex";
   menuNavOpen.style.display = "none";
   menuNavClose.style.display = "block";
 });
 menuNavClose.addEventListener("click", () => {
+  document.body.classList.remove("no-scroll");
   conNav.style.display = "none";
   menuNavOpen.style.display = "block";
   menuNavClose.style.display = "none";
