@@ -552,6 +552,7 @@ body {
   padding: 96px 80px;
   justify-items: center;
   align-content: center;
+  background-color: var(--color-50);
 }
 
 .main-container section.about .container {
