@@ -129,6 +129,7 @@ body {
 
 .main-container header {
   background-color: var(--color-default);
+  opacity: 0.9;
   width: 100%;
   padding: 16px 80px;
 }
@@ -356,7 +357,7 @@ body {
 .main-hero {
   background-color: var(--color-default);
   width: 100%;
-  padding: 96px 80px;
+  padding: 96px 80px 96px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -547,11 +548,14 @@ body {
 
 /* start about section */
 
-.main-container section.about {
+.main-container section {
   width: 100%;
-  padding: 96px 80px;
+  padding: clamp(64px, 10vw, 96px) clamp(16px, 5vw, 80px);
   justify-items: center;
   align-content: center;
+}
+
+.main-container section.about {
   background-color: var(--color-50);
 }
 
@@ -565,6 +569,7 @@ body {
 /* title will for all sections */
 
 .main-container section .container > .title-section {
+  width: fit-content;
   padding: 4px 20px;
   background-color: var(--color-200);
   color: var(--color-600);
@@ -640,9 +645,6 @@ body {
 /* start responsive design */
 
 @media (max-width: 1290px) {
-  .main-container section.about {
-    padding: 64px 16px;
-  }
   .main-container section.about .container {
     width: 100%;
   }
@@ -666,9 +668,6 @@ body {
 }
 
 @media (max-width: 768px) {
-  .main-container section.about {
-    padding: 64px 16px;
-  }
   .main-container section.about .container {
     width: 100%;
   }
@@ -711,3 +710,51 @@ body {
 /* end responsive design */
 
 /* end about section */
+/* start skills section */
+
+.main-container section.skills {
+  background-color: var(--color-default);
+}
+
+.main-container section.skills .container {
+  width: 1444px;
+  max-width: 100%;
+  min-width: 300px;
+  padding: 0 clamp(16px, 4vw, 32px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+}
+
+.main-container section.skills .container p {
+  text-align: center;
+  color: var(--color-600);
+  font-size: clamp(8px, 5vw, 15px);
+}
+
+.main-container section.skills .container .skill-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  width: 1200px;
+  max-width: 100%;
+  min-width: 300px;
+}
+
+.main-container section.skills .container .skill-icons div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  flex: 1 1 100px;
+}
+
+.main-container section.skills .container .skill-icons div img {
+  width: 64px;
+  height: 64px;
+}
+
+/* end skills section */
