@@ -1,4 +1,4 @@
-let getBody = document.querySelector("body");
+let getBody = document.body;
 let getTheme = document.querySelector(".theme");
 let getThemeMode = getTheme.querySelectorAll("span");
 let darkMode = localStorage.getItem("darkmode");
@@ -38,6 +38,8 @@ menuNavOpen.addEventListener("click", () => {
   conNav.style.display = "flex";
   menuNavOpen.style.display = "none";
   menuNavClose.style.display = "block";
+  header.style.cssText =
+    "position: fixed; top: 0; z-index: 10000000;  opacity:1";
 });
 menuNavClose.addEventListener("click", () => {
   document.body.classList.remove("no-scroll");
@@ -47,7 +49,7 @@ menuNavClose.addEventListener("click", () => {
 });
 
 window.addEventListener("resize", () => {
-  if (window.innerWidth > 767) {
+  if (window.innerWidth >= 767) {
     conNav.style.display = "flex";
     menuNavOpen.style.display = "none";
     menuNavClose.style.display = "none";
@@ -80,9 +82,10 @@ let iconsLogo = [
   "icon-skills/icon-storybook.svg",
   "icon-skills/icon-git.svg",
 ];
+
 let iconsTitle = [
   "javascript",
-  "Typescript",
+  "typescript",
   "react",
   "next.js",
   "node.js",
@@ -99,22 +102,39 @@ let iconsTitle = [
   "git",
 ];
 
-for (let i = 0; i < iconsLogo.length; i++) {
-  //create elments for skills
+if (!getBody.className) {
+  iconsLogo = [
+    "icon-skills/icon-javscript.svg",
+    "icon-skills/icon-typescript.svg",
+    "icon-skills/icon-react.svg",
+    "icon-skills/icon-nextjs.svg",
+    "icon-skills/icon-nodejs.svg",
+    "icon-skills/icon-expressdek.svg",
+    "icon-skills/icon-nest.svg",
+    "icon-skills/icon-socketdrk.svg",
+    "icon-skills/icon-postgresql.svg",
+    "icon-skills/icon-mongodb.svg",
+    "icon-skills/icon-sass.svg",
+    "icon-skills/icon-tailwindcss.svg",
+    "icon-skills/icon-figma.svg",
+    "icon-skills/icon-cypressdrk.svg",
+    "icon-skills/icon-storybook.svg",
+    "icon-skills/icon-git.svg",
+  ];
+}
 
+for (let i = 0; i < iconsLogo.length; i++) {
   let createContentSkills = document.createElement("div");
   let createIcons = document.createElement("img");
   let createIconsTitle = document.createElement("span");
 
-  // give attributes to elements
-
+  // Set attributes
   createIcons.setAttribute("src", iconsLogo[i]);
   createIcons.setAttribute("alt", iconsTitle[i]);
-  createContentSkills.className = `${iconsTitle[i]}`;
+  createContentSkills.className = iconsTitle[i];
   createIconsTitle.innerText = iconsTitle[i];
 
-  // append elememts
-
+  // Append elements
   createContentSkills.appendChild(createIcons);
   createContentSkills.appendChild(createIconsTitle);
   skillIcons.appendChild(createContentSkills);
@@ -125,9 +145,25 @@ for (let i = 0; i < iconsLogo.length; i++) {
 let header = document.getElementById("mainHeader");
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 0) {
-    header.style.cssText = "position: fixed; top: 0; z-index: 10000000000;";
+  if (window.scrollY > 15) {
+    header.style.cssText =
+      "position: fixed; top: 0; z-index: 10000000;  opacity: 0.9";
   } else {
-    header.style.cssText = "position: relative; top: 0; z-index: 0;";
+    header.style.cssText =
+      "position: relative; top: 0; z-index: 10000000000000;  opacity: 1";
   }
 });
+
+//...................scroll to up
+
+let upToHeader = document.getElementById("upToHeader");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 767) {
+    upToHeader.style.display = "block";
+  } else {
+    upToHeader.style.display = "none";
+  }
+});
+
+//.......................experience section

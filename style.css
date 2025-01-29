@@ -112,6 +112,10 @@
   --color-emerald-500: #10b981;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-family-primary);
   font-size: var(--font-size-body1);
@@ -129,7 +133,7 @@ body {
 
 .main-container header {
   background-color: var(--color-default);
-  opacity: 0.9;
+  opacity: 1;
   width: 100%;
   padding: 16px 80px;
 }
@@ -248,6 +252,20 @@ body {
   background-color: var(--color-800);
 }
 
+.main-container header .header-container #upToHeader a {
+  background-color: var(--color-900);
+  color: var(--color-50);
+  padding: 6px 5px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  text-decoration: none;
+  font-size: var(--font-size-h3-mobile);
+  text-transform: uppercase;
+}
+
 .no-scroll {
   overflow: hidden;
   touch-action: none;
@@ -258,7 +276,7 @@ body {
 /* start responsive design */
 @media (max-width: 1444px) {
   .main-container header {
-    padding: 16px 5px;
+    padding: 16px 0;
   }
   .main-container header .header-container {
     width: 1024px;
@@ -266,6 +284,9 @@ body {
 }
 
 @media (min-width: 768px) and (max-width: 1123px) {
+  .main-container header {
+    padding: 16px 0px;
+  }
   .main-container header .header-container {
     max-width: 758px;
   }
@@ -289,9 +310,8 @@ body {
     width: 100%;
     height: 100vh;
     background-color: var(--color-default);
-    height: 100%;
     position: absolute;
-    top: 62px;
+    top: 60px;
     right: 0px;
     flex-direction: column;
     align-items: start;
@@ -441,6 +461,7 @@ body {
   width: 400px;
   display: flex;
   justify-content: flex-end;
+  position: 10;
 }
 
 .main-hero .container .column-img .pic-container {
@@ -453,7 +474,7 @@ body {
   width: 280px;
   height: 320px;
   border: solid 10px var(--color-default);
-  z-index: 1100;
+  z-index: 10000;
 }
 
 .main-hero .container .column-img .pic-container::after {
@@ -464,7 +485,7 @@ body {
   top: 40px;
   left: 40px;
   background-color: var(--color-200);
-  z-index: 1000;
+  z-index: 100;
   transition: all 0.3s ease-in;
   -webkit-transition: all 0.3s ease-in;
   -moz-transition: all 0.3s ease-in;
@@ -568,7 +589,15 @@ body {
 
 /* title will for all sections */
 
-.main-container section .container > .title-section {
+.main-container section .container .title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.main-container section .container .title .title-section {
   width: fit-content;
   padding: 4px 20px;
   background-color: var(--color-200);
@@ -579,6 +608,12 @@ body {
   -moz-border-radius: 12px;
   -ms-border-radius: 12px;
   -o-border-radius: 12px;
+}
+
+.main-container section .container .title p {
+  text-align: center;
+  color: var(--color-600);
+  font-size: clamp(8px, 5vw, 15px);
 }
 
 .main-container section.about .container {
@@ -758,3 +793,6 @@ body {
 }
 
 /* end skills section */
+/* start experience section */
+
+/* end experience section */
