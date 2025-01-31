@@ -154,16 +154,4 @@ window.addEventListener("scroll", () => {
   }
 });
 
-//...................scroll to up
-
-let upToHeader = document.getElementById("upToHeader");
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 767) {
-    upToHeader.style.display = "block";
-  } else {
-    upToHeader.style.display = "none";
-  }
-});
-
 //.......................experience section

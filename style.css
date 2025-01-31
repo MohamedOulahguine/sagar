@@ -252,20 +252,6 @@ body {
   background-color: var(--color-800);
 }
 
-.main-container header .header-container #upToHeader a {
-  background-color: var(--color-900);
-  color: var(--color-50);
-  padding: 6px 5px;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  text-decoration: none;
-  font-size: var(--font-size-h3-mobile);
-  text-transform: uppercase;
-}
-
 .no-scroll {
   overflow: hidden;
   touch-action: none;
@@ -794,5 +780,87 @@ body {
 
 /* end skills section */
 /* start experience section */
+.main-container section.experience .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+}
 
+.main-container section.experience .container .wrapper {
+  position: relative;
+  background-color: var(--color-default);
+  width: clamp(300px, 80vw, 896px);
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 48px;
+  padding: 32px;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  box-shadow: 0 4px 3px 0 #0000002c;
+}
+
+.main-container section.experience .container .wrapper img {
+  order: 1;
+  width: 102px !important;
+}
+.main-container section.experience .container .wrapper span {
+  order: 3;
+  color: var(--color-700);
+  font-size: var(--font-size-body2);
+}
+.main-container section.experience .container .wrapper .info {
+  width: 382px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: start;
+  order: 2;
+}
+.main-container section.experience .container .wrapper .info > h1 {
+  color: var(--color-900);
+  font-size: var(--font-weight-semi-bold);
+}
+.main-container section.experience .container .wrapper .info > ul {
+  margin-left: 20px;
+}
+
+.main-container section.experience .container .wrapper .info > ul li {
+  color: var(--color-600);
+  font-size: var(--font-size-body2);
+}
+
+@media (max-width: 767px) {
+  .main-container section.experience .container .wrapper {
+    flex-direction: column;
+    /* width: 350px; */
+    gap: 16px;
+    overflow: hidden;
+    padding: 16px;
+  }
+  .main-container section.experience .container .wrapper img {
+    order: 1;
+  }
+  .main-container section.experience .container .wrapper span {
+    position: absolute;
+    top: 80px;
+    left: 20px;
+    order: 2;
+  }
+  .main-container section.experience .container .wrapper .info {
+    width: 100%;
+    order: 3;
+  }
+  .main-container section.experience .container .wrapper .info > h1 {
+    font-size: var(--font-size-body1);
+  }
+
+  .main-container section.experience .container .wrapper .info > ul li {
+    font-size: var(--font-size-body3);
+  }
+}
 /* end experience section */
