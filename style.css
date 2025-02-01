@@ -875,7 +875,7 @@ body {
   background-color: var(--color-default);
 }
 
-.main-container section .container {
+.main-container section.work .container {
   display: flex;
   flex-direction: column;
   gap: clamp(32px, 16vw, 48px);
@@ -1050,6 +1050,7 @@ body {
   box-shadow: var(--shadow-lg);
   background-color: var(--color-100);
   width: 373px;
+  height: 430px;
   padding: 48px;
   display: flex;
   flex-direction: column;
