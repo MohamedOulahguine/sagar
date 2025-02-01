@@ -130,6 +130,9 @@ body {
 }
 
 /* start header */
+.main-container {
+  overflow: hidden;
+}
 
 .main-container header {
   background-color: var(--color-default);
@@ -780,6 +783,9 @@ body {
 
 /* end skills section */
 /* start experience section */
+.main-container section.experience {
+  background-color: var(--color-50);
+}
 .main-container section.experience .container {
   display: flex;
   flex-direction: column;
@@ -864,3 +870,252 @@ body {
   }
 }
 /* end experience section */
+/* start work section */
+.main-container section.work {
+  background-color: var(--color-default);
+}
+
+.main-container section .container {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(32px, 16vw, 48px);
+  padding: 32px;
+}
+
+.main-container section.work .container .projects {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(32px, 16vw, 48px);
+  width: clamp(343px, 100vw, 1152px);
+}
+
+.main-container section.work .container .projects .project {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: clamp(32px, 16vw, 48px);
+  background-color: var(--color-50);
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.main-container section.work .container .projects .project:nth-child(2) figure {
+  order: 2;
+}
+
+.main-container section.work .container .projects .project figure {
+  background-color: var(--color-200);
+}
+
+.main-container section.work .container .projects .project figure,
+.main-container section.work .container .projects .project .card__content {
+  padding: clamp(32px, 16vw, 48px);
+}
+
+.main-container section.work .container .projects .project img {
+  width: clamp(279px, 50vw, 480px);
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  box-shadow: var(--shadow-md);
+}
+
+.main-container section.work .container .projects .project .card__content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 24px;
+}
+
+.main-container
+  section.work
+  .container
+  .projects
+  .project
+  .card__content
+  .card__title {
+  color: var(--color-900);
+  font-size: var(--font-weight-semi-bold);
+}
+
+.main-container
+  section.work
+  .container
+  .projects
+  .project
+  .card__content
+  .card__description {
+  color: var(--color-600);
+  font-size: var(--font-size-body2);
+}
+
+.main-container
+  section.work
+  .container
+  .projects
+  .project
+  .card__content
+  .card__skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+}
+
+.main-container
+  section.work
+  .container
+  .projects
+  .project
+  .card__content
+  .card__skills
+  .skill {
+  background-color: var(--color-200);
+  color: var(--color-600);
+  font-size: var(--font-size-body3);
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  width: fit-content;
+  padding: 4px 20px;
+}
+
+.main-container section.work .container .projects .project .card__content a i {
+  color: var(--color-300);
+}
+
+@media (max-width: 1156px) {
+  .main-container section.work .container .projects {
+    width: clamp(343px, 80vw, 1152px);
+  }
+
+  .main-container section.work .container .projects .project {
+    grid-template-columns: 1fr;
+    gap: 0;
+    width: 100%;
+  }
+
+  .main-container section.work .container .projects .project figure {
+    display: flex;
+    justify-content: center;
+    padding: 32px;
+  }
+  .main-container section.work .container .projects .project .card__content {
+    padding: 32px;
+  }
+  .main-container
+    section.work
+    .container
+    .projects
+    .project:nth-child(2)
+    figure {
+    order: 1;
+  }
+  .main-container
+    section.work
+    .container
+    .projects
+    .project:nth-child(2)
+    .card__content {
+    order: 2;
+  }
+}
+/* end work section */
+/* start Testimonials section */
+.main-container section.Testimonial {
+  background-color: var(--color-50);
+}
+
+.main-container section.Testimonial .container .Testimonials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 48px;
+}
+
+.main-container
+  section.Testimonial
+  .container
+  .Testimonials
+  .card__Testimonials {
+  box-shadow: var(--shadow-lg);
+  background-color: var(--color-100);
+  width: 373px;
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+}
+
+.main-container
+  section.Testimonial
+  .container
+  .Testimonials
+  .img__Testimonial
+  i {
+  width: 64px;
+  height: 64px;
+  background-color: #9ca3af;
+  color: #000000;
+  font-size: 30px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container
+  section.Testimonial
+  .container
+  .Testimonials
+  .card__description {
+  font-size: var(--font-size-body3);
+  color: var(--color-600);
+}
+
+.main-container section.Testimonial .container .Testimonials .card__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-container section.Testimonial .container .Testimonials .card__name {
+  font-size: var(--font-weight-semi-bold);
+  color: var(--color-900);
+}
+
+.main-container section.Testimonial .container .Testimonials .card__span {
+  font-size: var(--font-size-body3);
+  color: var(--color-600);
+}
+
+@media (max-width: 1156px) {
+  .main-container
+    section.Testimonial
+    .container
+    .Testimonials
+    .card__Testimonials {
+    width: 300px;
+    padding: 32px;
+  }
+}
+/* end Testimonials section */
