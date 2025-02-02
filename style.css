@@ -1034,6 +1034,11 @@ body {
   background-color: var(--color-50);
 }
 
+.main-container section.Testimonial .container {
+  display: grid;
+  gap: 32px;
+}
+
 .main-container section.Testimonial .container .Testimonials {
   display: flex;
   justify-content: center;
