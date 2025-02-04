@@ -199,11 +199,8 @@ body {
   font-size: var(--font-size-body2);
 }
 
-.main-container header .header-container nav ul li a:hover {
-  color: var(--color-900);
-}
-
-.main-container header .header-container nav ul li a:hover {
+.main-container header .header-container nav ul li a:hover,
+.main-container header .header-container nav ul li a:active {
   color: var(--color-600);
 }
 
@@ -602,7 +599,7 @@ body {
 .main-container section .container .title p {
   text-align: center;
   color: var(--color-600);
-  font-size: clamp(8px, 5vw, 15px);
+  font-size: clamp(8px, 19px, 19px);
 }
 
 .main-container section.about .container {
@@ -1125,3 +1122,67 @@ body {
   }
 }
 /* end Testimonials section */
+/* start contact section */
+
+.main-container section.contact {
+  background-color: var(--color-default);
+  padding: 96px 80px;
+}
+
+.main-container .contact .container {
+  display: grid;
+  gap: 48px;
+  justify-content: center;
+}
+
+.main-container .contact .container .contact__info,
+.main-container .contact .container .last__colmn {
+  display: grid;
+  justify-content: center;
+  gap: 16px;
+}
+
+.main-container .contact .container .contact__info > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.main-container .contact .container .contact__info > div i,
+.main-container .contact .container .contact__info > div span {
+  font-size: var(--font-size-h3-desktop);
+}
+
+.main-container .contact .container .contact__info > div p {
+  color: var(--color-900);
+  font-size: var(--font-size-h3-desktop);
+}
+
+.main-container .contact .container .last__colmn p {
+  color: var(--color-600);
+  font-size: var(--font-size-body2);
+}
+
+.main-container .contact .container .last__colmn .social {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.main-container .contact .container .last__colmn .social i {
+  color: var(--color-600);
+}
+/* end contact section */
+/* start footer section */
+footer {
+  padding: 24px 80px;
+  width: 100%;
+  text-align: center;
+}
+
+footer p {
+  color: var(--color-600);
+  font-size: var(--font-size-body3);
+}
+/* end footer section */
